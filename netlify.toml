@@ -12,3 +12,10 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000"
+
+# Images et feuille de style : mises en cache une semaine. La CSS porte un
+# numéro de version (?v=) qui change à chaque modification.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
